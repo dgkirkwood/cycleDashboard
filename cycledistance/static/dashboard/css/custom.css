@@ -1,0 +1,129 @@
+body, html {
+    height: 100%;
+}
+.bg { 
+    /* The image used */
+    background-image: url("http://i.imgur.com/7QzwgpF.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.table-borderless td,
+.table-borderless th {
+    border: 0;
+}
+
+
+.bg-cisco{
+	background-color: rgba(33, 68, 113, 0.8)
+}
+
+.bg-table{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.cisco-orange{
+	color: rgb(251,171,24);
+}
+
+.container-fluid{
+	padding: 0;
+}
+
+.bottom-text{
+	vertical-align: text-bottom;
+}
+
+
+.bigFont{
+	font-size: 350%;
+}
+
+.veryBigFont{
+    font-size: 450%;
+}
+
+.mediumFont {
+	font-size: 300%;
+}
+
+.valueIndent {
+	padding-left: 12em;
+}
+
+
+
+@font-face {
+    src: url("");
+    font-family: 'CiscoSansTT';
+    src: url('../fonts/CiscoSansTT.woff2') format('woff2'),
+        url('../fonts/CiscoSansTT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CiscoSansTTLight';
+    src: url('../fonts/CiscoSansTTLight.woff2') format('woff2'),
+        url('../fonts/CiscoSansTTLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CiscoSansTTThin';
+    src: url('../fonts/CiscoSansTT-Thin.woff2') format('woff2'),
+        url('../fonts/CiscoSansTT-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CiscoSansTTHeavy';
+    src: url('../fonts/CiscoSansTT-Heavy.woff2') format('woff2'),
+        url('../fonts/CiscoSansTT-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CiscoSansTTBold';
+    src: url('../fonts/CiscoSansTT-Bold.woff2') format('woff2'),
+        url('../fonts/CiscoSansTT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+.ciscoFont {
+    font-family: 'CiscoSansTT';
+}
+
+.ciscoLight {
+	font-family: 'CiscoSansTTLight';
+}
+
+.ciscoThin {
+	font-family: 'CiscoSansTTThin';
+}
+
+.ciscoHeavy {
+	font-family: 'CiscoSansTTHeavy';
+}
+
+.ciscoBold {
+	font-family: 'CiscoSansTTBold';
+}
+
+
+.removeMargin {
+	margin-bottom: 0;
+}

@@ -1,0 +1,130 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+<link href="{% static "dashboard/css/custom.css" %}" rel="stylesheet" type="text/css">
+<div class="bg">
+
+	<div class="container-fluid">
+		<div class="m-b-3 p-b-3 bg-cisco text-white">
+
+				<br>
+				<p class="text-center text-white ciscoBold bigFont removeMargin">CYCLE FOR CHARITY LEADERBOARD</p>
+				<p class="text-center text-white h3 ciscoThin">Cisco supporting Tour de Cure and Special Olympics Australia</p>
+				<br>
+
+
+		</div>
+	</div>
+
+	<br>
+	<br>
+
+
+
+	<div class="container-fluid pl-5 pr-5">
+		<div class="row">
+
+		<div class="col-lg-6">
+
+			<h1 class="text-center bg-cisco text-white ciscoBold">{{ collatedValues.5.0 }}</h1>
+			<div class="responsive-table bg-table">
+				<table class = "table table-borderless"> 
+					<thead>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for rank in top10 %}
+							<tr>
+								<td><p class="ciscoLight h4">{{forloop.counter}}. {{ rank.0 }}</p></td>
+								<td><p class="text-right ciscoLight h4">{{ rank.2 }}</p></td>
+								<td><p class="text-right ciscoLight h4">{{ rank.1 }}m</p></td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+
+
+			<div class="responsive-table bg-cisco">
+				<table class = "table table-borderless"> 
+					<thead>
+					</thead>
+					<tbody>
+							<tr>
+								<td><p class="cisco-orange ciscoBold mediumFont removeMargin">{{ collatedValues.1.0 }}</p></td>
+								<td><p class="cisco-orange ciscoBold mediumFont text-right removeMargin">{{ collatedValues.1.1 }}KM</p></td>
+							</tr>
+							<tr>
+								<td><p class="cisco-orange ciscoBold mediumFont removeMargin">{{ collatedValues.2.0 }}</p></td>
+								<td><p class="cisco-orange ciscoBold mediumFont text-right removeMargin">{{ collatedValues.2.1 }}</p></td>
+							</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+		<!--
+		<div class="row pl-3">
+			<p class="cisco-orange ciscoBold mediumFont ">&nbsp;{{ collatedValues.1.0 }} = &nbsp;</p><p class="cisco-orange ciscoBold mediumFont ">{{ collatedValues.1.1 }} m &nbsp; </p>
+		</div>
+		<div class="row pl-3">
+			<p class="cisco-orange ciscoBold mediumFont ">&nbsp;{{ collatedValues.2.0 }} = &nbsp; &nbsp; &nbsp; </p><p class="cisco-orange ciscoBold mediumFont "> {{ collatedValues.2.1 }} &nbsp; &nbsp; &nbsp; </p>
+		</div>
+		-->
+
+		<div class="row pl-3">
+			<img src="{% static "dashboard/images/logo.png" %}" alt="My image"/>
+		</div>
+		</div>
+
+
+	
+		<div class="col-lg-6">
+			<h1 class="text-center bg-cisco text-white ciscoBold">{{ collatedValues.16.0 }}</h1>
+			<div class="responsive-table bg-table">
+				<table class = "table table-borderless"> 
+					<thead>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for rank in recent10 reversed %}
+							<tr>
+								<td><p class="ciscoLight h4">{{forloop.counter}}. {{ rank.0 }}</p></td>
+								<td><p class="text-right ciscoLight h4">{{ rank.2 }}</p></td>
+								<td><p class="text-right ciscoLight h4">{{ rank.1 }}m</p></td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+<script>
+
+ function autoRefresh()
+{
+	window.location = window.location.href;
+}
+
+ setInterval('autoRefresh()', 10000); // this will reload page after every 10 secounds; Method I
+</script>
+
+
